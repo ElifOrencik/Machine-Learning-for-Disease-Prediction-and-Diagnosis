@@ -1,0 +1,1 @@
+powershell -NoExit -Command "Remove-Item -Recurse -Force .myenv; virtualenv .myenv; . .myenv\Scripts\activate.ps1; pip install -r requirements.txt; py main.py"

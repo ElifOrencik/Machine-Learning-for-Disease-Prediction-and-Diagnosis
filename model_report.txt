@@ -1,0 +1,50 @@
+Do�ruluk Oran�: 95.24%
+S�n�fland�rma Raporu:
+                                        precision    recall  f1-score   support
+
+(vertigo) Paroymsal Pozisyonel Vertigo       1.00      1.00      1.00         1
+                                  AIDS       1.00      1.00      1.00         1
+                                  Akne       1.00      1.00      1.00         1
+                                Alerji       1.00      1.00      1.00         1
+                       Alkolik Hepatit       1.00      1.00      1.00         1
+                                Artrit       1.00      1.00      1.00         1
+                       Bron�iyal Ast�m       1.00      1.00      1.00         1
+                          Deng Hummas�       1.00      1.00      1.00         1
+      Dimorfik hemmoroidler (basurlar)       1.00      1.00      1.00         1
+                              Diyabet        1.00      1.00      1.00         1
+                  Fel�(Beyin Kanamas�)       1.00      1.00      1.00         1
+                             Hepatit A       1.00      1.00      1.00         1
+                             Hepatit B       1.00      1.00      1.00         1
+                             Hepatit C       1.00      1.00      1.00         1
+                             Hepatit D       1.00      1.00      1.00         1
+                             Hepatit E       1.00      1.00      1.00         1
+                         Hipertansiyon       0.00      0.00      0.00         0
+                        Hipertansiyon        0.00      0.00      0.00         1
+                        Hipertiroidizm       1.00      1.00      1.00         1
+                           Hipoglisemi       1.00      1.00      1.00         1
+                         Hipotiroidizm       1.00      1.00      1.00         1
+                              Impetigo       1.00      1.00      1.00         1
+                            Kalp Krizi       1.00      1.00      1.00         1
+                       Kronik kolestaz       1.00      1.00      1.00         1
+                    Mantar Enfeksiyonu       1.00      0.50      0.67         2
+                            Mide Gribi       1.00      1.00      1.00         1
+                                Migren       1.00      1.00      1.00         1
+                        Osteoartristis       1.00      1.00      1.00         1
+             Peptik �lser hastal�klar�       1.00      1.00      1.00         1
+                                 Refl�       1.00      1.00      1.00         1
+                               Sar�l�k       1.00      1.00      1.00         1
+                       Sedef Hastal���       1.00      1.00      1.00         1
+                    Servikal spondiloz       1.00      1.00      1.00         1
+                       So�uk Alg�nl���       1.00      1.00      1.00         1
+                             Su �i�e�i       0.50      1.00      0.67         1
+                                 S�tma       1.00      1.00      1.00         1
+                                  Tifo       1.00      1.00      1.00         1
+                            T�berk�loz       1.00      1.00      1.00         1
+                      Varisli Damarlar       1.00      1.00      1.00         1
+                               Zat�rre       1.00      1.00      1.00         1
+                �drar yolu enfeksiyonu       1.00      1.00      1.00         1
+                       �la� Reaksiyonu       1.00      1.00      1.00         1
+
+                              accuracy                           0.95        42
+                             macro avg       0.94      0.94      0.94        42
+                          weighted avg       0.96      0.95      0.95        42

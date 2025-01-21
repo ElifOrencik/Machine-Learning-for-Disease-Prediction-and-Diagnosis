@@ -1,0 +1,78 @@
+# Başlangıç
+
+Bu sayfada bir model oluşturup ve eğitikten sonra bu modeli nasıl entegre edeceğinizi öğreneceksiniz.
+
+```{note}
+Elinizdeki şablonda entegre edilmiş basit bir yapay zeka modeli bulunmaktadır. Daha fazla bilgi için `main.py` ve `train.py` dosyalarına göz atın.
+```
+
+## Model oluşturma
+
+Bu kısma internetten bakın muhtemelen [scikit-learn](https://scikit-learn.org/stable/index.html) kullanacaksınız. (kodları `train.py` dosyasına ekleyin)
+
+## Model entegrasyonu
+
+### Modeli yükleme
+
+`train.py` dosyanızda modelinizi eğitip dosyaya kaydettikten sonra `main.py` dosyasında modelinizi yükleyip kullanabilirsiniz.
+
+Bunun için modelinizi `main` fonksiyonunun içinde while döngüsünün hemen üstüne ekleyin.
+
+Eğer modelinizi:
+
+- `joblib` ile kaydettiyseniz:
+
+```python
+model = joblib.load("Dosya Adı.joblib")
+```
+
+- `pickle` ile kaydettiyseniz:
+
+```python
+with open("Dosya Adı.pkl", "rb") as f:
+  model = pickle.load(f)
+```
+
+- Farklı format ile kaydettiyseniz ona göre yükleyin.
+
+```{warning}
+Model yükleme kodunuzu kesinlikle while döngüsünün içine koymayın. Bu modelin sürekli yüklenmesine sebep olur ve programınız yavaşlar.
+```
+
+### Girdi verilerini alma
+
+While döngüsünün içinde ilk olarak kullanacağınız sensör verilerini [Core](#core) sınıfı ile alın.
+Eğer birden fazla sensör verisi kullanacaksanız bu verileri [`asyncio.gather`](https://docs.python.org/3/library/asyncio-task.html#asyncio.gather) ile almalısınız aksi takdirde sensör verilerini tek tek bekliyeceğiniz için programınız yavaşlar.
+
+Bu kod robotun sıcaklık ve nem verilerini aynı anda alır.
+
+```python
+temperature, humidity = await asyncio.gather(
+    # bu ve alttaki satır da await kullanmadık çünkü asnycio.gather() kullanıyoruz
+    core.get_temperature(),
+    core.get_humidity()
+)
+
+print("Sıcaklık:", temperature)
+print("Nem:", humidity)
+```
+
+### Verileri modelinize verme
+
+Verileri modelinize vermeden önce eğittiğiniz verilerin formatına uygun bir şekilde işleyin (preprocessing). Daha sonra modelinize verin ve çıktıyı alın.
+
+Eğer `scikit-learn` kullandıysanız [Preprocessing data](https://scikit-learn.org/stable/modules/preprocessing.html) bölünümüne göz atmanız tavsiye edilir.
+
+### Çıktıyı işleme
+
+Modelinizden aldığınız çıktıyı işleyin ve [Core](#core) sınıfını kullanarak bu çıktıya göre robotunuzu kontrol edin.
+
+```python
+prediction = model.predict([[temperature, humidity]])[0]
+sağlığa_uygun_mu = prediction > 0.5
+
+if sağlığa_uygun_mu:
+    await core.set_state("Ortam Sağlıklı")
+else:
+    await core.set_state("Ortam Sağlıksız")
+```

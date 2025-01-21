@@ -1,0 +1,32 @@
+# Girdiler ve Çıktılar
+
+Girdileri alıp çıktıları göndermek için [Core](#robo_core.core.Core) sınıfını kullanmalısınız.
+
+Örneğin modeliniz ses seviyesi verisine göre motoru açıp kapatıyorsa bunun gibi birşey yapabilirsiniz:
+
+```python
+# ses seviyesini al
+ses_seviyesi = await core.get_sound_level()
+
+# Kendi fonksiyonumuzla motorun
+çok_sesli_mi = karar_ver(ses_seviyesi)
+
+# Çok sesli ise motoru aç/kapat
+if çok_sesli_mi:
+    await core.turn_on_motor()
+else:
+    await core.turn_off_motor()
+
+# Robotun ekranına durumumuzu yazdır
+if çok_sesli_mi:
+    durum = "Çok sesli"
+else:
+    durum = "Normal ses düzeyi"
+
+core.set_state("Ortam sesi: " + durum)
+```
+
+```{eval-rst}
+.. autoclass:: robo_core.core.Core
+    :members:
+```

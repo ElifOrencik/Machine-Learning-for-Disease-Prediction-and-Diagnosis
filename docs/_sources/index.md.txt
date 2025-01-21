@@ -1,0 +1,12 @@
+```{include} ../robo_core/README.md
+
+```
+
+# Sonraki adımlar
+[Başlangıç](#intro) sayfasına göz atın
+
+```{toctree}
+:hidden:
+intro
+core
+```

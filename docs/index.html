@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="tr" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Yapay zeka robot eklentisi &#8212; robo-core  belgelendirmesi</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=622dbbea"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/translations.js?v=b0f24d8d"></script>
+    <link rel="index" title="Dizin" href="genindex.html" />
+    <link rel="search" title="Ara" href="search.html" />
+    <link rel="next" title="Başlangıç" href="intro.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="yapay-zeka-robot-eklentisi">
+<h1>Yapay zeka robot eklentisi<a class="headerlink" href="#yapay-zeka-robot-eklentisi" title="Link to this heading">¶</a></h1>
+<div class="admonition tip">
+<p class="admonition-title">Tüyo</p>
+<p>Projenize başlamadan önce python’da asenkron (async) programlama hakkında bilgi sahibi olmanız tavsiye edilir.</p>
+</div>
+<section id="baslamadan-once">
+<h2>Başlamadan önce<a class="headerlink" href="#baslamadan-once" title="Link to this heading">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">AUTHOR.txt</span></code> dosyasına adınızı ve soyadınızı yazın.</p>
+<p><code class="docutils literal notranslate"><span class="pre">TITLE.txt</span></code> dosyasına projenizin adını yazın.</p>
+</section>
+<section id="kurulum">
+<h2>Kurulum<a class="headerlink" href="#kurulum" title="Link to this heading">¶</a></h2>
+<p>Saçma hatalar ile karşılaşmamak için python 3.13 kullanmanızı tavsiye ederiz.</p>
+<section id="visual-studio-code-ile-kurulum">
+<h3>Visual studio code ile kurulum<a class="headerlink" href="#visual-studio-code-ile-kurulum" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Komut paletini açın (<code class="docutils literal notranslate"><span class="pre">Ctrl+Shift+P</span></code> veya <code class="docutils literal notranslate"><span class="pre">F1</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Python:</span> <span class="pre">Create</span> <span class="pre">Environment</span></code> yazın (Türkçe kullanıyorsanız <code class="docutils literal notranslate"><span class="pre">Python:</span> <span class="pre">Ortam</span> <span class="pre">Oluştur</span></code> yazın)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Venv</span></code> seçin</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">3.13.x</span> <span class="pre">64-bit</span></code> seçin (x yerine herhangi bir sayı gelebilir)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> kutucuğunu işaretleyin ve <code class="docutils literal notranslate"><span class="pre">OK</span></code> butonuna tıklayın</p></li>
+<li><p>Paketlerin yüklenmesini bekleyin</p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">main.py</span></code> dosyasını sağ üstten çalıştırın</p>
+<p>vscodenin içindeki terminalleri kullanacaksanız ve hali hazırda açık terminaliniz varsa kapatın ve yeniden açın</p>
+</section>
+<section id="cmd-ile-kurulum">
+<h3>Cmd ile kurulum<a class="headerlink" href="#cmd-ile-kurulum" title="Link to this heading">¶</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Uyarı</p>
+<ol class="arabic simple" start="2">
+<li><p>adımı her yeni cmd açtığınızda yapmanız gerekmektedir.</p></li>
+</ol>
+</div>
+<ol class="arabic simple">
+<li><p>virtualenv oluşturun <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">venv</span> <span class="pre">venv</span></code></p></li>
+<li><p>virtualenv’i aktif edin <code class="docutils literal notranslate"><span class="pre">venv\Scripts\activate</span></code></p></li>
+<li><p>gerekli kütüphaneleri yükleyin <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code></p></li>
+<li><p>eklentinizi çalıştırın <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">main.py</span></code></p></li>
+</ol>
+</section>
+</section>
+<section id="dosya-yapisi">
+<h2>Dosya yapısı<a class="headerlink" href="#dosya-yapisi" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">main.py</span></code> Yapay zekanın çalışacağı ve robotun kontrol edileceği ana dosya (zorunlu)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">train.py</span></code> Yapay zekayı eğittiğimiz dosya</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">core.py</span></code> Eklentinizin yapay zeka ile haberleşmesini sağlayan sınız (sizdeki ile robottaki dosya içerikleri farklı olacak)</p></li>
+</ul>
+</section>
+<section id="kullanim">
+<h2>Kullanım<a class="headerlink" href="#kullanim" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">train.py</span></code> dosyasına yapay zekanızı eğitip kaydetmek için gerekli kodları yazın.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">main.py</span></code> dosyasında yapay zekanızı yükleyin ve robotunuzu kontrol etmek için gerekli kodları yazın.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">main.py</span></code> dosyasını çalıştırın.</p></li>
+<li><p>Eklentinizin aldığı ve gönderdiği verileri görün.</p></li>
+</ol>
+</section>
+<section id="test-sureci">
+<h2>Test süreci<a class="headerlink" href="#test-sureci" title="Link to this heading">¶</a></h2>
+<p>Test süreci için size özel bir sınıf yazdık <code class="docutils literal notranslate"><span class="pre">main.py</span></code> dosyasını çalıştırarak sanki robot varmış gibi girdi ve çıktılar alabilirsiniz.</p>
+<p>Örneğin</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>23:18:03.393 ❯❯ Sıcaklık: 25
+23:18:03.394 ❯❯ Nem: 50
+23:18:03.395 ❮❮ Motor: 107.84341637010681
+</pre></div>
+</div>
+<p>Burada gördüğünüz gibi eğer robot sıcaklık olarak 25 ve nem olarak 50 verilerini alsaydı motor olarak 107.84 verisini gönderirdi.</p>
+<p>Konsolda gördüğünüz bu satırlar robotta görünmeyecek ancak bunun yerine girdiler (❯❯) gerçek sensörlerden gelecek ve
+çıktılar (❮❮) gerçek motorlara gidecek. Burada gerçek verileri ve sahte test verilerini gönrederen sınıf aynı olduğu için (core) kendi bilgisayarınızda robot ile aynı şekilde çalışacaktır.</p>
+</section>
+<section id="paket-kurulumu">
+<h2>Paket kurulumu<a class="headerlink" href="#paket-kurulumu" title="Link to this heading">¶</a></h2>
+<p>Yeni paket kurarken (örneğin <code class="docutils literal notranslate"><span class="pre">pandas</span></code>) <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> dosyasına paket adını yazın ve <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code> komutunu çalıştırın.</p>
+<p>Eğer yinede <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandas</span></code> şekline kurmak istiyorsanız paket adını <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> dosyasına eklemeyi unutmayın</p>
+</section>
+</section>
+<section id="sonraki-adimlar">
+<h1>Sonraki adımlar<a class="headerlink" href="#sonraki-adimlar" title="Link to this heading">¶</a></h1>
+<p><a class="reference internal" href="intro.html"><span class="doc std std-doc">Başlangıç</span></a> sayfasına göz atın</p>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">robo-core</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Git" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Gezinti</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Başlangıç</a></li>
+<li class="toctree-l1"><a class="reference internal" href="core.html">Girdiler ve Çıktılar</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="intro.html" title="sonraki bölüm">Başlangıç</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Semih Koyuncu.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/index.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,42 @@
+﻿Disease,Medical_Treatment,Herbal_Treatment
+Mantar Enfeksiyonu,"Topikal antifungal kremler, oral antifungal ilaçlar","Çay ağacı yağı, sarımsak yağı, hindistancevizi yağı"
+Alerji,"Antihistaminler, kortikosteroidler","Kuşburnu, zerdeçal, nane çayı"
+Reflü,"Proton pompa inhibitörleri, H2 blokerleri, antiasitler","Meyan kökü, hatmi kökü çayı, zencefil"
+Kronik Kolestaz,Ursodeoksikolik asit,"Karahindiba, süt devedikeni"
+İlaç Reaksiyonu,"Antihistaminler, kortikosteroidler","Papatya çayı, aloe vera"
+Peptik Ülser Hastalıkları,"Proton pompa inhibitörleri, H2 reseptör antagonistleri","Aloe vera suyu, bal, lahana suyu"
+AIDS,Antiretroviral tedavi (ART),"Ekinezya, Moringa"
+Diyabet,İnsülin tedavisi veya oral diyabet ilaçları,"Tarçın, çemen otu, çörek otu"
+Mide Gribi,"Rehidratasyon, probiyotikler",Zencefil çayı
+Bronşiyal Astım,"İnhalasyon kortikosteroidleri, bronkodilatörler","Zencefil çayı, okaliptus yağı"
+Hipertansiyon,"ACE inhibitörleri, beta blokerler, diüretikler","Sarımsak, hibiskus çayı, zeytin yaprağı ekstraktı"
+Migren,"Triptanlar, NSAID’ler, beta blokerler","Lavanta yağı, nane yağı"
+Servikal Spondiloz,"NSAID'ler, kas gevşeticiler, fizyoterapi","Zerdeçal, zencefil, sıcak kompres"
+Felç (Beyin Kanaması),"Trombolitik tedavi, antikoagülanlar","Omega-3 yağ asitleri, zeytinyağı"
+Sarılık,Hepatoprotektif ilaçlar,"Hindiba kökü çayı, enginar"
+Sıtma,Antimalaryal ilaçlar,Cinchona kabuğu
+Su Çiçeği,"Antiviral ilaçlar, kaşıntıyı önleyici losyonlar","Yulaf ezmesi banyoları, aloe vera"
+Deng Humması,"Sıvı tedavisi, destekleyici bakım",Papaya yaprağı suyu
+Tifo,Antibiyotik tedavi,"Sarımsak, fesleğen"
+Hepatit A,Antiviral tedavi,"Enginar, zerdeçal"
+Hepatit B,Antiviral tedavi,"Enginar, zerdeçal"
+Hepatit C,Antiviral tedavi,"Enginar, zerdeçal"
+Hepatit D,Antiviral tedavi,"Enginar, zerdeçal"
+Hepatit E,Antiviral tedavi,"Enginar, zerdeçal"
+Alkolik Hepatit,"Alkolün bırakılması, karaciğer destek tedavileri","Enginar, karahindiba, süt devedikeni"
+Tüberküloz,Antitüberküloz ilaçlar,"Sarımsak, zerdeçal"
+Soğuk Algınlığı,"Dekonjestanlar, antihistaminler","Zencefil, limon ve bal karışımı"
+Zatürre,"Antibiyotikler, solunum desteği","Kekik yağı, okaliptüs yağı"
+Dimorfik Hemoroidler,"Rektal kremler, cerrahi müdahale","At kestanesi özü, aloe vera"
+Kalp Krizi,"Trombolitik tedavi, anjiyoplasti","Omega-3, zeytinyağı"
+Varisli Damarlar,"Skleroterapi, varis çorapları",At kestanesi özü
+Hipotiroidizm,Levotiroksin,İyotlu deniz yosunu
+Hipertiroidizm,"Antitiroid ilaçlar, radyoaktif iyot",Melisa çayı
+Hipoglisemi,Glikoz veya karbonhidrat desteği,Kuru üzüm veya bal
+Osteoartrit,"NSAID'ler, kortikosteroid enjeksiyonları",Zerdeçal ve omega-3
+Artrit,"NSAID'ler, kortikosteroidler",Zencefil ve sarımsak
+Paroksismal Pozisyonel Vertigo,"Epley manevrası, vestibüler rehabilitasyon",Zencefil çayı
+Akne,Topikal retinoidler ve antibiyotik kremler,"Çay ağacı yağı, bal maskesi"
+İdrar Yolu Enfeksiyonu,Antibiyotikler,Kızılcık suyu
+Sedef Hastalığı,"Kortikosteroid kremler, fototerapi","Aloe vera, hindistancevizi yağı"
+Impetigo,"Antibiyotik kremler, ağızdan antibiyotikler",Çay ağacı yağı

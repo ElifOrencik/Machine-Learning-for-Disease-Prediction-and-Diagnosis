@@ -1,0 +1,10 @@
+numpy
+scikit-learn
+joblib
+loguru
+wxwidgets
+SpeechRecognition
+pandas
+pyaudio
+pygame
+gtts
