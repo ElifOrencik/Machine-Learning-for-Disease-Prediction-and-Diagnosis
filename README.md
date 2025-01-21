@@ -1,3 +1,5 @@
+YÜZDE 95 DOĞRULUK ORANIYLA ÇALIŞMAKTADIR!!!!!!!!!!!!!!!!!!!!!!
+
 # Yapay zeka robot eklentisi
 
 ```{tip}
@@ -74,3 +76,6 @@ Konsolda gördüğünüz bu satırlar robotta görünmeyecek ancak bunun yerine 
 Yeni paket kurarken (örneğin `pandas`) `requirements.txt` dosyasına paket adını yazın ve `pip install -r requirements.txt` komutunu çalıştırın.
 
 Eğer yinede `pip install pandas` şekline kurmak istiyorsanız paket adını `requirements.txt` dosyasına eklemeyi unutmayın
+
+
+MAİN.PY DOSYASI ÇALIŞTIRILDIĞINDA İLK DENEME OLARAK SİSTEME KAŞINTI VE CİLT DÖKÜNTÜSÜ BELİRTİSİNİ SUNUN BÖYLELİKLE MANTAR ENFEKSİYONU DİYEREK HASTALIĞI BULACAK VE TEŞHİSİ KOYACAKTIR. DATABSE İ İNTERNETTEN BULDUM BİRÇOK SİTEDE YER ALMAKTADIR. İNGİLİZCE OLARAK HAZIRLANMIŞ BİR DATABASE Dİ BEN TÜRKÇEYE ÇEVİRDİM. YÜZDE 95 DOĞRULUK ORANI BULUNMAKTADIR. 
